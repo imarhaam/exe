@@ -3,77 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>clashified.exe</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #b3e0ff, #ffb3d9); /* Light Blue to Light Pink gradient */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        h1 {
-            color: #ff66b2; /* Dark Pink */
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: #333;
-            font-size: 1.5em;
-            max-width: 600px;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .bio {
-            background-color: #fff; /* White background for bio section */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-        }
-
-        footer {
-            background-color: #ff66b2; /* Dark Pink */
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            width: 100%;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-    </style>
+    <title>imarhaam</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="icon.png" alt="Arhaam Logo">
+            <h1>arhaam's website <3</h1>
+        </div>
+        <nav>
+            <ul>
+                <button class="you"><a href="https://youtube.com/@clashifiedEXE" target="_blank">Youtube</a></button>
+                <button class="ins"><a href="https://instagram.com/clashifiedEXE" target="_blank">Instagram</a></button>
+                <button class="dsc"><a href="https://dsc.gg/exelounge" target="_blank">Discord</a></button>
 
-    <h1>clashified.exe</h1>
+                
+            </ul>
+        </nav>
+    </header>
 
-    <p>hello, everyone! welcome to my website.</p>
+    
+    <section id="bio">
+        <div class="bio-box">
+            <p><strong>Myself ~ <3</strong></p>
+            <p>hey, i'm arhaam. ❕ <br>
+                i love anime & gaming, I love coding too! 👀<br>
+                 so welcome y'all to my journey on coding 🌸<br>
+                  this is my first website! 💖<br>
+                   and if you wanna contact me join my server ✨ <br>
+                my socials are above ☝🏻</p>
+        </div>
+        <div class="minecraft-box">
+            <img src="minecraft_skin.png" alt="Arhaam's Minecraft Skin">
+        </div>
+    </section>
 
-    <div class="bio">
-        <h2>myself ~ <span> &lt;3</span></h2>
-        <p>hey, i'm arhaam. ❕<br>
-            i love anime & gaming, i love coding too! 👀<br>
-            so welcome y'all to my journey on coding 🌸 <br>
-            this is my first website! 💖<br> 
-            and if you wanna contact me join my server ✨<br>
-            my socials are mentioned below 👇🏻 
-            </p>
-    </div>
 
-    <footer>
-        <p>&copy;  2024 clashified.exe |  All rights reserved. </p>
-        
+    <footer id="footer">
+        <p>© 2024 clashified.exe | All rights reserved.</p>
         <div class="social-icons">
             <a href="https://discord.gg/DYRbYhSBwy">
                 <ion-icon name="logo-discord"></ion-icon>
@@ -84,12 +52,28 @@
             <a href="https://www.instagram.com/clashifiedexe/">
                 <ion-icon name="logo-instagram"></ion-icon>
             </a>
-        
-        
-        </div>
+            </div>
     </footer>
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-</html>
+    <script>
+        const minecraftSkin = document.getElementById('minecraftSkin');
+        const img = minecraftSkin.querySelector('img');
+        
+        minecraftSkin.addEventListener('mousemove', function(e) {
+            const boundingRect = minecraftSkin.getBoundingClientRect();
+            const offsetX = e.clientX - boundingRect.left;
+            const offsetY = e.clientY - boundingRect.top;
+            const width = boundingRect.width;
+            const height = boundingRect.height;
+            const xPercent = offsetX / width;
+            const yPercent = offsetY / height;
+            
+            img.style.transformOrigin = (xPercent * 100) + '% ' + (yPercent * 100) + '%';
+        });
+        
+        minecraftSkin.addEventListener('mouseleave', function() {
+            img.style.transformOrigin = 'center';
+        });
+        </script>
+        
+        </body>
+        </html>

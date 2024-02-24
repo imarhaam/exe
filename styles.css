@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #FFF;
+}
+
+header {
+    background-color: #4B0082; /* Dark Purple */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background-color: #000;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+
+}
+
+.ins {border-radius: 12px;}
+.you {border-radius: 12px;}
+.dsc {border-radius: 12px;}
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+.bio-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #4B0082; /* Dark Purple */
+    color: #FFF;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-links img {
+    height: 30px;
+    width: auto;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+#bio {
+    display: flex;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.bio-box {
+    flex: 2; /* Adjust the flex value to make the bio box bigger */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1; /* Ensure the bio box stays above the Minecraft box */
+}
+
+.minecraft-skin {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    max-width: 100%; /* Ensure image doesn't exceed its container */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: filter 0.3s; /* Add transition for smooth effect */
+}
+
+.minecraft-skin img {
+    width: 100%;
+    height: auto;
+}
+
+.minecraft-skin:hover img {
+    filter: brightness(150%); /* Apply glow effect on hover */
+}
+
+body {
+    background-image: url("wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+}
